@@ -3,7 +3,6 @@
 @mixin container {
   margin-left: 0;
   margin-right: 0;
-  min-width: 375px;
   width: 100%;
   @media (min-width: 1024px) {
     max-width: 1024px;

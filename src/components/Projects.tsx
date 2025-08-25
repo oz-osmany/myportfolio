@@ -102,7 +102,7 @@ export default function Projects() {
     <div className="">
       <Section id="projects" title="Projects" subtitle="The three most important projects.">
         <div className="relative flex flex-col w-full gap-6">
-          <div className="absolute left-1/2 top-0 h-full w-[1.6px] -translate-x-1/2 bg-blue-500" />
+          <div className="absolute hidden md: block left-1/2 top-0 h-full w-[1.6px] -translate-x-1/2 bg-blue-500" />
           {projects.map((p) => (
             <ProjectCard key={p.id} {...p} />
           ))}

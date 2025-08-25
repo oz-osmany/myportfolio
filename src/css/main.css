@@ -211,7 +211,6 @@ body {
   justify-content: space-between;
   margin-left: 0;
   margin-right: 0;
-  min-width: 375px;
   width: 100%;
 }
 @media (min-width: 1024px) {
@@ -241,7 +240,6 @@ body {
 .footer__inner {
   margin-left: 0;
   margin-right: 0;
-  min-width: 375px;
   width: 100%;
   padding-block: 24px;
   color: var(--muted);
@@ -264,7 +262,6 @@ body {
 .about {
   margin-left: 0;
   margin-right: 0;
-  min-width: 375px;
   width: 100%;
   display: flex;
 }
@@ -433,7 +430,6 @@ body {
 .container {
   margin-left: 0;
   margin-right: 0;
-  min-width: 375px;
   width: 100%;
 }
 @media (min-width: 1024px) {
