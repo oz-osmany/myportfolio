@@ -1,0 +1,45 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+:root {
+  --bg: #{$bg};
+  --fg: #{$fg};
+  --muted: #{$muted};
+  --accent: #{$accent};
+}
+
+[data-theme='light'] {
+  --bg: #ffffff;
+  --fg: #0b0e14;
+  --muted: #505a68;
+  --accent: #22c55e;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  // font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', sans-serif;
+  font-family:
+    Raleway,
+    Inter,
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    Ubuntu,
+    Cantarell,
+    'Helvetica Neue',
+    Arial,
+    'Noto Sans',
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol',
+    'Noto Color Emoji',
+    sans-serif;
+  line-height: 1.55;
+}
+
+// h1 {
+
+//   font-size: xxx-large;
+//   padding-bottom: 70px;
+// }

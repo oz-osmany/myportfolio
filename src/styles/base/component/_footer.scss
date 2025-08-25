@@ -1,0 +1,12 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+@use '../../base/reset';
+
+.footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  &__inner {
+    @include container;
+    padding-block: 24px;
+    color: var(--muted);
+  }
+}

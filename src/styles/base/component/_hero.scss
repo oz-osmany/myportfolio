@@ -1,0 +1,64 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+@use '../../base/reset';
+
+.hero {
+  height: 100vh;
+  color: rgb(239, 242, 244);
+  display: flex;
+
+  &__bg {
+    width: 100%;
+    background-image: url('/assets/osmany.jpg');
+    background-position: center;
+    background-size: cover;
+    transform: scaleX(-1);
+  }
+  &__blur {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(35 58 105), rgba(35 58 105) 34%, rgba(0, 0, 0, 0.4));
+  }
+  &__info {
+    background-color: black;
+    width: 35%;
+    height: 100%;
+  }
+  &__container_inner {
+    @include container_inner;
+  }
+  &__container {
+    position: absolute;
+    top: 0;
+  }
+  &__cta {
+    margin-top: 16px;
+  }
+
+  &__subtitle {
+    color: var(--muted);
+    margin-top: 8px;
+  }
+
+  &__title {
+    font-size: 40px;
+    font-weight: 800;
+    font-family: Raleway;
+
+    @media (min-width: 1024px) {
+      font-size: 95px;
+    }
+  }
+  &__sign {
+    position: absolute;
+    transform: translate(0, 194px);
+
+    @media (min-width: 768px) {
+      transform: translateY(317px);
+    }
+    @media (min-width: 1024px) {
+      transform: translate(225px, 335px);
+    }
+  }
+}

@@ -1,0 +1,83 @@
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
+@use 'base/reset';
+
+@use './base/global';
+@use './base/component/hero';
+@use './base/component/nav';
+@use './base/component/footer';
+@use './base/component/about';
+@use './base/component/skills';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  @include container;
+}
+.btn {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: transparent;
+  color: var(--fg);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.15s ease-out;
+  &:hover {
+    transform: translateY(-1px);
+  }
+  &--ghost {
+    background: transparent;
+  }
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+  &--cards {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+}
+
+.project-card {
+  @include card;
+  overflow: hidden;
+  display: grid;
+  gap: 12px;
+  &__image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  &__body {
+    padding: 16px;
+  }
+  &__title {
+    font-weight: 700;
+    margin: 0 0 6px;
+  }
+  &__desc {
+    color: var(--muted);
+    margin: 0 0 12px;
+  }
+  &__tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+}
+.tag {
+  font-size: 12px;
+  padding: 4px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+}
+
+.page-loader {
+  padding: 64px;
+  text-align: center;
+  color: var(--muted);
+}

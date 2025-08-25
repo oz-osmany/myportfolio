@@ -1,0 +1,122 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+@use '../../base/reset';
+
+.about {
+  @include container;
+  // height: 100vh;
+  display: flex;
+  &__inner {
+    padding: 50px 15px;
+    background-color: #ffffff;
+    // background-color: #48556f;
+    // @apply bg-gradient-to-b from-[#0b0f17] via-[#0b0f17] to-[#111827];
+    // @apply bg-gradient-to-b from-[#2e4066] via-[#2e4066] to-[#111827];
+    // @apply bg-gradient-to-b from-[#2e34408c] via-[#2e4066] to-[#111827];
+
+    @media (min-width: 700px) {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 600px;
+      padding: 70px 30px;
+    }
+    @media (min-width: 1024px) {
+      // flex-direction: row;
+      // justify-content: space-around;
+      max-width: 1024px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    @include flex-col;
+  }
+  &__img {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    @media (min-width: 700px) {
+      width: 250px;
+      height: 250px;
+    }
+    @media (min-width: 1024px) {
+      width: 300px;
+      height: 300px;
+    }
+  }
+  &__beyond {
+    background-color: #48556f;
+    margin-top: 20px;
+    @include flex-col;
+    padding: 0;
+    width: 100%;
+    @media (min-width: 1024px) {
+      margin-top: 60px;
+      padding: 20px 10px;
+    }
+  }
+  &__mask {
+    border-radius: 100%;
+    mask-image: radial-gradient(circle, white 60%, transparent 90%);
+    margin-bottom: 15px;
+  }
+  &__me {
+    background-color: #48556f;
+    width: 100%;
+    @include flex-col;
+    @media (min-width: 1024px) {
+      // width: 50%;
+      padding: 0 10px;
+    }
+  }
+  &__text {
+    padding: 10px;
+    text-align: center;
+
+    @media (min-width: 700px) {
+      padding: 15px 40px;
+    }
+    @media (min-width: 1024px) {
+      padding: 30px 40px;
+    }
+    @media (min-width: 1280px) {
+      padding: 55px 40px;
+    }
+  }
+  &__title {
+    margin-bottom: 10px;
+    font-size: 22px;
+    padding-block: 10px;
+    @apply md:text-[30px] lg:text-[35px];
+    @media (min-width: 1024px) {
+      font-size: xx-large;
+      padding-block: 30px;
+    }
+    @media (min-width: 1280px) {
+      font-size: 40px;
+      padding-block: 60px;
+    }
+  }
+  img {
+    object-fit: cover;
+  }
+  h1 {
+    color: $tbd;
+    // @media (min-width:1024px) {
+    //     font-size: xxx-large;
+    //     padding-bottom: 70px;
+    // }
+  }
+  p {
+    color: $tbd;
+    font-size: small;
+    @media (min-width: 700px) {
+      font-size: 16px;
+    }
+    @media (min-width: 1024px) {
+      font-size: 18px;
+    }
+    @media (min-width: 1224px) {
+      font-size: 20px;
+    }
+  }
+}

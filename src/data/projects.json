@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "SalsaenCasa",
+    "description": "Web developed for the Salsa en Casa school.",
+    "stack": ["React", "Redux Toolkit", "Node.js", "MySQL", "SCSS"],
+    "image": "/assets/best-film.jpg",
+    "demoUrl": "https://salsaencasacuba.com",
+    "repoUrl": "#",
+    "highlights": [
+      "Gestión de estado global con RTK",
+      "Diseño responsive inspirado en HubSpot",
+      "Autenticación y roles básicos"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "OzTools",
+    "description": "Solution for automatic processes and calculations of hotel contracts.",
+    "stack": ["React-Native", "Redux Toolkit", "Node.js", "MySQL", "SCSS"],
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
+    "demoUrl": "https://contrato.oz-tools.com",
+    "repoUrl": "#",
+    "highlights": [
+      "Gestión de estado global con RTK",
+      "Diseño responsive inspirado en HubSpot",
+      "Autenticación y roles básicos"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Oz-crm",
+    "description": "CRM con autenticación, clientes, tareas y timeline (Notas, Emails, Llamadas).",
+    "stack": ["React", "Redux Toolkit", "Node.js", "MySQL", "SCSS"],
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
+    "demoUrl": "https://www.ozcrm.oz-tools.com",
+    "repoUrl": "#",
+    "highlights": [
+      "Gestión de estado global con RTK",
+      "Diseño responsive inspirado en HubSpot",
+      "Autenticación y roles básicos"
+    ]
+  }
+]
