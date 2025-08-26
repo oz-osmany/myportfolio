@@ -1,0 +1,66 @@
+// ===== Certificates & Testimonials Data =====
+export const certificates = [
+    {
+    id: 1,
+    title: "DevOps Certificate",
+    issuer: "Udemy",
+    year: 2022,
+    image: "/assets/udemyDevop.jpg",
+    },
+    {
+    id: 2,
+    title: "PHP 8 and MySql",
+    issuer: "Udemy",
+    year: 2023,
+    image: "/assets/udemyPHP.jpg",
+    },
+    {
+    id: 3,
+    title: "React: Hooks and MERN",
+    issuer: "Udemy",
+    year: 2022,
+    image: "/assets/udemyMERN.jpg",
+    },
+    {
+    id: 4,
+    title: "React Native",
+    issuer: "Udemy",
+    year: 2022,
+    image: "/assets/udemyReactNative.jpg",
+    },
+    {
+    id: 5,
+    title: "Web development training at MasterD",
+    issuer: "MasterD",
+    year: 2023,
+    image: "/assets/masterD.jpg",
+    },
+    {
+    id: 6,
+    title: "University diploma in Telecommunications",
+    issuer: "CUJAE",
+    year: 2024,
+    image: "/assets/cujae.jpg",
+    },
+    {
+    id: 7,
+    title: "Prensa Latina",
+    issuer: "web developement for Prensa Latina",
+    year: 2021,
+    image: "/assets/recomendationPL.jpg",
+    },
+    {
+    id: 8,
+    title: "Senses of Cuba",
+    issuer: "Automation of hotel contracts",
+    year: 2022,
+    image: "/assets/soc.jpg",
+    },
+    {
+    id: 9,
+    title: "Prensa Latina",
+    issuer: "App development, Android and iOs for Prensa Latina",
+    year: 2022,
+    image: "/assets/soc.jpg",
+    },
+    ];

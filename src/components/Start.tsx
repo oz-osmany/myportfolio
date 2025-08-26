@@ -17,7 +17,7 @@ const Start = () => {
             fetchPriority="high"
           />
         </picture>
-        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(11,15,23,0.95)_0%,rgba(11,15,23,0.85)_20%,rgba(11,15,23,0.70)_40%,rgba(11,15,23,0.35)_60%,rgba(11,15,23,0.15)_80%,transparent_100%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(11,15,23,0.95)_0%,rgba(11,15,23,0.85)_100%,rgba(11,15,23,0.70)_40%,rgba(11,15,23,0.35)_60%,rgba(11,15,23,0.15)_80%,transparent_100%)]" />
         {/* Content */}
         <div className="relative z-10 mx-auto max-w-7xl px-6 py-16 md:px-8 lg:px-10 flex items-center min-h-[70vh]">
           <div className="max-w-2xl text-left">

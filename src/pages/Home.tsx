@@ -1,4 +1,5 @@
 import About from '@/components/About';
+import CertificatesAndTestimonials from '@/components/Certificates';
 import Projects from '@/components/Projects';
 import Skills from '@/components/Skillss';
 import Start from '@/components/Start';
@@ -17,6 +18,9 @@ export default function Home() {
       </div>
       <div className="mx-auto max-w-7xl px-4 pb-20 md:px-6 lg:px-8">
         <Projects />
+      </div>
+      <div>
+        <CertificatesAndTestimonials  />
       </div>
     </div>
   );
