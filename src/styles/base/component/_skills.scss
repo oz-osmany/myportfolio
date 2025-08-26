@@ -3,7 +3,7 @@
 @use '../../base/reset';
 
 .skills {
-  background-color: #48556f;  
+  background-color: #48556f;
   &__inner {
     @apply relative flex items-center justify-between rounded-2xl
          border border-white/10 bg-gradient-to-b from-white/5 to-white/[0.03]

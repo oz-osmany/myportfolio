@@ -34,13 +34,15 @@
     display: flex;
     width: 200px;
     height: 200px;
+    object-fit: cover;
+
     @media (min-width: 700px) {
-      width: 250px;
-      height: 250px;
-    }
-    @media (min-width: 1024px) {
       width: 300px;
       height: 300px;
+    }
+    @media (min-width: 1024px) {
+      width: 330px;
+      height: 330px;
     }
   }
   &__beyond {
@@ -97,7 +99,7 @@
     }
   }
   img {
-    object-fit: cover;
+    // object-fit: cover;
   }
   h1 {
     color: $tbd;

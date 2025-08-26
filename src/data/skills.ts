@@ -1,18 +1,17 @@
+import {
+  FaReact,
+  FaJsSquare,
+  FaSass,
+  FaCss3Alt,
+  FaBootstrap,
+  FaGithub,
+  FaTrello,
+  FaWordpress,
+} from 'react-icons/fa';
+import { SiTypescript, SiTailwindcss, SiMysql } from 'react-icons/si';
 // Types
 export type SkillLevel = 'Basic' | 'Intermediate' | 'Advanced';
 export type SkillGroup = 'Frontend' | 'Tools' | 'Backend/DB';
-export type SkillIconKey =
-  | 'react'
-  | 'javascript'
-  | 'typescript'
-  | 'sass'
-  | 'css'
-  | 'bootstrap'
-  | 'tailwind'
-  | 'trello'
-  | 'github'
-  | 'mysql'
-  | 'wordpress';
 
 export interface Skill {
   name: string;
@@ -21,6 +20,36 @@ export interface Skill {
   group: SkillGroup;
   level: SkillLevel;
 }
+// ——— Icons registry + helper
+export const ICONS = {
+  react: FaReact,
+  javascript: FaJsSquare,
+  typescript: SiTypescript,
+  sass: FaSass,
+  css: FaCss3Alt,
+  bootstrap: FaBootstrap,
+  tailwind: SiTailwindcss,
+  trello: FaTrello,
+  github: FaGithub,
+  mysql: SiMysql,
+  wordpress: FaWordpress,
+};
+
+export type SkillIconKey = keyof typeof ICONS;
+
+export const ICON_COLORS: Record<SkillIconKey, string> = {
+  react: '#61DAFB',
+  javascript: '#F7DF1E',
+  typescript: '#3178C6',
+  sass: '#CC6699',
+  css: '#1572B6',
+  bootstrap: '#7952B3',
+  tailwind: '#38BDF8',
+  trello: '#0052CC',
+  github: '#FFFFFF',
+  mysql: '#4479A1',
+  wordpress: '#21759B',
+};
 
 export const skills: Skill[] = [
   { name: 'React', color: 'text-sky-400', key: 'react', group: 'Frontend', level: 'Advanced' },

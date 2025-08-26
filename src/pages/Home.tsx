@@ -5,21 +5,19 @@ import Start from '@/components/Start';
 
 export default function Home() {
   return (
-    <div>
-      <section className="hero">
-        <div className="hero__bg"></div>
-        <div className="hero__blur"></div>
+    <div className="min-h-screen w-full bg-gradient-to-b from-[#0b0f17] via-[#0b0f17] to-[#111827]">
+      <div>
         <Start />
-      </section>
-      <section>
+      </div>
+      <div>
         <About />
-      </section>
-      <section>
+      </div>
+      <div>
         <Skills />
-      </section>
-      <section>
+      </div>
+      <div className="mx-auto max-w-7xl px-4 pb-20 md:px-6 lg:px-8">
         <Projects />
-      </section>
+      </div>
     </div>
   );
 }

@@ -1,6 +1,5 @@
 import React from 'react';
-import { SkillIcon } from '../lib/skill-icon';
-import { Skill, skills } from '@/data/skills';
+import { ICON_COLORS, ICONS, Skill, SkillIconKey, skills } from '@/data/skills';
 import Section from '@/lib/section';
 
 // ——— UI Helpers
@@ -10,16 +9,38 @@ const Pill = ({ label }: { label: string }) => (
   </span>
 );
 
-const SkillCard = ({ skill }: { skill: Skill }) => {
+const SkillIcon = ({
+  name,
+  className,
+  color,
+  size = 18,
+}: {
+  name: SkillIconKey;
+  className?: string;
+  color?: string;
+  size?: number;
+}) => {
+  const Icon = ICONS[name as keyof typeof ICONS];
+  return <Icon className={className} color={color} size={size} />;
+};
+const SkillCard = ({
+  name,
+  level,
+  iconKey,
+}: {
+  name: string;
+  level: string;
+  iconKey: SkillIconKey;
+}) => {
   return (
     <div role="listitem" tabIndex={0} className="skills__inner group">
       <div className="flex items-center gap-3">
         <div className="grid h-9 w-9 place-items-center rounded-xl bg-white/10">
-          <SkillIcon name={skill.key} className={`text-xl ${skill.color}`} />
+          <SkillIcon name={iconKey} color={ICON_COLORS[iconKey]} size={18} />
         </div>
         <div>
-          <div className="text-sm font-semibold text-white">{skill.name}</div>
-          <div className="text-xs text-white/60">Nivel: {skill.level}</div>
+          <div className="text-sm font-semibold text-white">{name}</div>
+          <div className="text-xs text-white/60">Nivel: {level}</div>
         </div>
       </div>
       <div className="opacity-0 transition-opacity duration-200 group-hover:opacity-100">
@@ -40,12 +61,12 @@ export default function Skills() {
   );
 
   return (
-    <div className="skills">
+    <>
       {/* —— Skills */}
       <Section
         id="skills"
         title="Skills"
-        subtitle="Technologies and tools I use every day. Hover/focus for details."
+        subtitle="Technologies and tools I use every day."
         titleColor="white"
       >
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -57,7 +78,7 @@ export default function Skills() {
               </div>
               <div role="list" className="grid grid-cols-1 gap-3">
                 {items.map((it) => (
-                  <SkillCard key={it.key} skill={it} />
+                  <SkillCard key={it.key} name={it.name} level={it.level} iconKey={it.key} />
                 ))}
               </div>
             </div>
@@ -81,6 +102,6 @@ export default function Skills() {
           </a>
         </div>
       </section>
-    </div>
+    </>
   );
 }

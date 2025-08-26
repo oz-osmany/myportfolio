@@ -16,10 +16,15 @@ const Section = ({
       <div className="container">
         <div className="mb-8 flex items-end justify-between gap-4">
           <div>
-            <h2 className={`text-2xl font-bold tracking-tight text-${titleColor} md:text-3xl`}>
-              {title}
-            </h2>
-            {subtitle && <p className={`mt-2 max-w-2xl text-sm text-${titleColor}`}>{subtitle}</p>}
+            <h2 className={`text-2xl font-bold tracking-tight text-white md:text-3xl`}>{title}</h2>
+            {subtitle && (
+              <p
+                className={`mt-2 max-w-2xl text-sm text-white
+              `}
+              >
+                {subtitle}
+              </p>
+            )}
           </div>
         </div>
         {children}

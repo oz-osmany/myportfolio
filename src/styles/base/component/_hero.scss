@@ -3,16 +3,26 @@
 @use '../../base/reset';
 
 .hero {
+  position: absolute;
   height: 100vh;
   color: rgb(239, 242, 244);
   display: flex;
 
   &__bg {
-    width: 100%;
-    background-image: url('/assets/osmany.jpg');
-    background-position: center;
-    background-size: cover;
-    transform: scaleX(-1);
+    // width: 100%;
+    // background-image: url('/assets/osmany.jpg');
+    // background-position: center;
+    // background-size: cover;
+    // transform: scaleX(-1);
+    background-image: linear-gradient(
+      to right,
+      rgba(11, 15, 23, 1.95) 0%,
+      rgba(11, 15, 23, 0.8) 47%,
+      rgba(11, 15, 23, 0.7) 60%,
+      rgba(11, 15, 23, 0.35) 100%,
+      rgba(11, 15, 23, 0.15) 83%,
+      transparent 100%
+    );
   }
   &__blur {
     position: absolute;

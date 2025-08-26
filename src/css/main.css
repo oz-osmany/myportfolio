@@ -51,7 +51,7 @@ h6 {
   --accent: #6ee7b7;
 }
 
-[data-theme=light] {
+[data-theme='light'] {
   --bg: #ffffff;
   --fg: #0b0e14;
   --muted: #505a68;
@@ -61,21 +61,42 @@ h6 {
 body {
   background: var(--bg);
   color: var(--fg);
-  font-family: Raleway, Inter, system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
+  font-family:
+    Raleway,
+    Inter,
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    Ubuntu,
+    Cantarell,
+    'Helvetica Neue',
+    Arial,
+    'Noto Sans',
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol',
+    'Noto Color Emoji',
+    sans-serif;
   line-height: 1.55;
 }
 
 .hero {
+  position: absolute;
   height: 100vh;
   color: rgb(239, 242, 244);
   display: flex;
 }
 .hero__bg {
-  width: 100%;
-  background-image: url("/assets/osmany.jpg");
-  background-position: center;
-  background-size: cover;
-  transform: scaleX(-1);
+  background-image: linear-gradient(
+    to right,
+    rgb(11, 15, 23) 0%,
+    rgba(11, 15, 23, 0.8) 47%,
+    rgba(11, 15, 23, 0.7) 60%,
+    rgba(11, 15, 23, 0.35) 100%,
+    rgba(11, 15, 23, 0.15) 83%,
+    transparent 100%
+  );
 }
 .hero__blur {
   position: absolute;
@@ -305,17 +326,18 @@ body {
   display: flex;
   width: 200px;
   height: 200px;
+  object-fit: cover;
 }
 @media (min-width: 700px) {
   .about__img {
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
   }
 }
 @media (min-width: 1024px) {
   .about__img {
-    width: 300px;
-    height: 300px;
+    width: 330px;
+    height: 330px;
   }
 }
 .about__beyond {
@@ -386,9 +408,6 @@ body {
     font-size: 40px;
     padding-block: 60px;
   }
-}
-.about img {
-  object-fit: cover;
 }
 .about h1 {
   color: #d2d6dc;
@@ -514,4 +533,4 @@ body {
   padding: 64px;
   text-align: center;
   color: var(--muted);
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */
